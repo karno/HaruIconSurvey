@@ -13,13 +13,13 @@
                 "NV": { "connect": { "HAMM": 161, "HAHH": 298 } },
                 "MM": {
                     "share": [ "HDMM" ],
-                    "connect": { "HANV": 161 },
-                    "point": { "HAMW": 37 }
+                    "point": { "HAMW": 37 },
+                    "connect": { "HANV": 161 }
                 },
                 "MW": {
                     "share": [ "HDMW" ],
-                    "connect": { "HAKS": 133 },
-                    "point": { "HAMM": 37 }
+                    "point": { "HAMM": 37 },
+                    "connect": { "HAKS": 133 }
                 },
                 "KS": { "connect": { "HANU": 180, "HAMM": 170 } },
                 "NU": { "connect": { "HAEE": 117, "HAKS": 180 } },
@@ -39,8 +39,8 @@
                 "SB": { "connect": { "HBHH": 199, "HBJI": 205 } },
                 "JI": {
                     "share": [ "HFJI" ],
-                    "connect": { "HBSB": 205 },
-                    "point": { "HBNM": 92 }
+                    "point": { "HBNM": 92 },
+                    "connect": { "HBSB": 205 }
                 },
                 "NM": { "connect": { "HBJI": 92, "HBYY": 219 } },
                 "YY": { "connect": { "HBNM": 219 } }
@@ -66,8 +66,8 @@
                 "TJ": { "connect": { "HCJT": 124, "HCTI": 125 } },
                 "TI": {
                     "share": [ "HITI" ],
-                    "connect": { "HCTJ": 125 },
-                    "point": { "HCTT": 230 }
+                    "point": { "HCTT": 230 },
+                    "connect": { "HCTJ": 125 }
                 },
                 "TT": {
                     "share": [ "HDTT" ],
@@ -96,10 +96,13 @@
                 "MH": { "connect": { "HDME": 187, "HDYA": 199 } },
                 "YA": {
                     "share": [ "HEYA" ],
-                    "connect": { "HDYT": 245 },
-                    "point": { "HDMH": 199 }
+                    "point": { "HDMH": 199 },
+                    "connect": { "HDYT": 245 }
                 },
-                "YT": { "connect": { "HDYA": 245, "HDTT": 221 } },
+                "YT": {
+                    "point": { "HDTT": 221 },
+                    "connect": { "HDYA": 245 }
+                },
                 "TT": {
                     "share": [ "HCTT" ],
                     "connect": { "YT": 221 }
@@ -163,9 +166,15 @@
                 },
                 "MG": { "connect": { "HGGJ": 170, "HGYB": 98 } },
                 "YB": { "connect": { "HGMG": 98, "HGYC": 151 } },
-                "YC": { "connect": { "HGYB": 151, "HGYD": 166 } },
+                "YC": {
+                    "connect": { "HGYB": 151, "HGYD": 166 },
+                    "pass_night": true
+                },
                 "YD": { "connect": { "HGYC": 166, "HGKG": 284 } },
-                "KG": { "connect": { "HGYD": 284, "HGEE": 341 } },
+                "KG": {
+                    "connect": { "HGYD": 284, "HGEE": 341 },
+                    "pass_night": true
+                },
                 "EE": { "connect": { "HGKG": 341, "HGYZ": 191 } },
                 "YZ": { "connect": { "HGEE": 191, "HGKU": 459 } },
                 "KU": { "connect": { "HGYZ": 459, "HGZZ": 300 } },
@@ -182,7 +191,10 @@
                     "share": [ "HEKD" ],
                     "point": { "HHAK": 565 }
                 },
-                "AK": { "connect": { "HHKD": 565, "HHSV": 323 } },
+                "AK": {
+                    "connect": { "HHKD": 565, "HHSV": 323 },
+                    "pass_night": true
+                },
                 "SV": { "connect": { "HHAK": 323, "HHSP": 258 } },
                 "SP": { "connect": { "HHSV": 258 } }
             }
@@ -225,8 +237,8 @@
                 },
                 "NK": {
                     "share": [ "HCNK" ],
-                    "connect": { "MMME": 228 },
-                    "point": { "MMHH": 230 }
+                    "point": { "MMHH": 230 },
+                    "connect": { "MMME": 228 }
                 },
                 "JJ": {
                     "share": [ "HCJJ" ],
@@ -241,7 +253,446 @@
                 "TF": { "connect": { "MMAA": 322, "MMKA": 843 } },
                 "KA": { "connect": { "MMTF": 843 } }
             }
-        }
+        },
+        "MK": {
+            "name": "香住線",
+            "company": "ムメイ高速鉄道",
+            "author": "mumei_himazin",
+            "color": "#F7BC9B",
+            "stations": {
+                "KA": { "connect": { "MKKB": 249 } },
+                "KB": { "connect": { "MKKA": 249 } }
+            }
+        },
+        "RN": {
+            "name": "南北快速線",
+            "company": "はるレール",
+            "author": "ayafmy",
+            "color": "#89A4D0",
+            "stations": {
+                "GJ": { "connect": { "RNKM": 756 } },
+                "KM": { "connect": { "RNGJ": 756, "RNHH": 612 } },
+                "HH": {
+                    "share": [ "HXHH" ],
+                    "connect": { "RNKM": 612 }
+                }
+            }
+        },
+        "RJ": {
+            "name": "城南線",
+            "company": "はるレール",
+            "author": "ayafmy",
+            "color": "#AB10D2",
+            "stations": {
+                "EE": { "connect": { "RJNA": 599 } },
+                "NA": { "connect": { "RJEE": 599, "RJCN": 193 } },
+                "CN": { "connect": { "RJNA": 193, "RJJJ": 143 } },
+                "JJ": { "connect": { "RJCN": 143, "RJKH": 192 } },
+                "KH": { "connect": { "RJJJ": 192, "RJHH": 314 } },
+                "HH": {
+                    "share": [ "RTHH" ],
+                    "connect": { "RJKH": 314 }
+                }
+            }
+        },
+        "RT": {
+            "name": "新津線",
+            "company": "はるレール",
+            "author": "ayafmy",
+            "color": "#AB10D2",
+            "stations": {
+                "HH": {
+                    "share": [ "RJHH" ],
+                    "connect": { "RJGZ": 80 }
+                },
+                "GZ": { "connect": { "RTHH": 80, "RTMN": 122 } },
+                "MN": { "connect": { "RTGZ": 122, "RTKC": 141 } },
+                "KC": { "connect": { "RTMN": 141, "RTNT": 237 } },
+                "NT": { "connect": { "RTKC": 237, "RTCC": 328 } },
+                "CC": { "connect": { "RTNT": 328, "RTTH": 129 } },
+                "TH": { "connect": { "RTCC": 129, "RTTK": 152 } },
+                "TK": {
+                    "share": [ "TRTK" ],
+                    "connect": { "RTTH": 152 }
+                }
+            }
+        },
+        "RS": {
+            "name": "城津線(西城線)",
+            "company": "はるレール",
+            "author": "ayafmy",
+            "color": "#86B3BD",
+            "stations": {
+                "EE": {
+                    "share": [ "ENEE" ],
+                    "connect": { "RSSA": 498 }
+                },
+                "SA": { "connect": { "RSEE": 498, "RSHH": 536 } },
+                "HH": { "connect": { "RSSA": 536 } }
+            }
+        },
+        "ET": {
+            "name": "月沢本線",
+            "company": "はる急行鉄道",
+            "author": "karno",
+            "color": "#FF0000",
+            "stations": {
+                "NV": { "connect": { "ETIJ": 196 } },
+                "IJ": { "connect": { "ETNV": 196, "ETSA": 170 } },
+                "SA": { "connect": { "ETIJ": 170, "ETTY": 241 } },
+                "TY": { "connect": { "ETSA": 241, "ETSM": 163 } },
+                "SM": { "connect": { "ETTY": 163, "ETIB": 122 } },
+                "IB": { "connect": { "ETSM": 122, "ETYY": 74 } },
+                "YY": { "connect": { "ETIB": 74, "ETYO": 299 } },
+                "YO": { "connect": { "ETYY": 299, "ETKI": 210 } },
+                "KI": { "connect": { "ETYO": 210, "ETAO": 141 } },
+                "AO": { "connect": { "ETKI": 141, "ETTR": 139 } },
+                "TR": { "connect": { "ETAO": 139, "ETNF": 86 } },
+                "NF": { "connect": { "ETTR": 86 } }
+            }
+        },
+        "EX": {
+            "name": "月沢急行線",
+            "company": "はる急行鉄道",
+            "author": "karno",
+            "color": "#BF0000",
+            "stations": {
+                "HH": {
+                    "share": [ "RNHH" ],
+                    "connect": { "EXTY": 361 }
+                },
+                "TY": { "connect": { "EXHH": 361, "EXYY": 348 } },
+                "YY": { "connect": { "EXTY": 348, "EXKI": 415 } },
+                "KI": { "connect": { "EXYY": 415, "EXNF": 356 } },
+                "NF": { "connect": { "EXKI": 356 } }
+            }
+        },
+        "EN": {
+            "name": "月沢急行線",
+            "company": "はる急行鉄道",
+            "author": "karno",
+            "color": "#006B33",
+            "stations": {
+                "EE": {
+                    "share": [ "RSEE" ],
+                    "connect": { "ENYZ": 184 }
+                },
+                "YZ": { "connect": { "ENEE": 184, "ENKI": 774 } },
+                "KI": { "connect": { "ENYZ": 774, "ENTO": 498 } },
+                "TO": { "connect": { "ENKI": 498, "ENCT": 578 } },
+                "CT": { "connect": { "ENTO": 578, "ENSN": 542 } },
+                "SN": { "connect": { "ENCT": 542 } }
+            }
+        },
+        "EK": {
+            "name": "北見線",
+            "company": "はる急行鉄道",
+            "author": "karno",
+            "color": "#4210D2",
+            "stations": {
+                "TY": {
+                    "share": [ "ESTY" ],
+                    "connect": { "EKKT": 214 }
+                },
+                "KT": { "connect": { "EKTY": 214, "EKSA": 125 } },
+                "SA": { "connect": { "EKKT": 125, "EKHB": 281 } },
+                "HB": { "connect": { "EKSA": 281, "EKEE": 253 } },
+                "EE": { "connect": { "EKHB": 253, "EKYZ": 131 } },
+                "YZ": { "connect": { "EKEE": 131 } }
+            }
+        },
+        "ES": {
+            "name": "参宮線",
+            "company": "はる急行鉄道",
+            "author": "karno",
+            "color": "#E4007F",
+            "stations": {
+                "TY": {
+                    "share": [ "EKTY" ],
+                    "connect": { "ESTS": 97 }
+                },
+                "TS": { "connect": { "ESTY": 97, "ESSB": 243 } },
+                "SB": { "connect": { "ESTS": 243 } }
+            }
+        },
+        "SC": {
+            "name": "中央新幹線",
+            "company": "はる高速旅客鉄道",
+            "author": "karno",
+            "color": "#F5A500",
+            "stations": {
+                "EE": { "connect": { "SCHH": 798 } },
+                "HH": { "connect": { "SCEE": 798, "SCAA": 375 } },
+                "AA": { "connect": { "SCHH": 375, "SCSC": 431 } },
+                "SC": { "connect": { "SCAA": 431, "SCSS": 852 } },
+                "SS": { "connect": { "SCSC": 852, "SCNG": 892 } },
+                "NG": { "connect": { "SCSS": 892 } }
+            }
+        },
+        "SN": {
+            "name": "南北新幹線",
+            "company": "はる高速旅客鉄道",
+            "author": "karno",
+            "color": "#007BC7",
+            "stations": {
+                "TT": { "connect": { "SNJJ": 526 } },
+                "JJ": { "connect": { "SNTT": 526, "SNHH": 396 } },
+                "HH": { "connect": { "SNJJ": 396, "SNYY": 517 } },
+                "YY": { "connect": { "SNHH": 517 } }
+            }
+        },
+        "NI": {
+            "name": "内環線",
+            "company": "はる近郊鉄道",
+            "author": "hnakai0909",
+            "color": "#DBCC75",
+            "stations": {
+                "JI": { "connect": { "NINR": 169, "NISI": 247 } },
+                "SI": { "connect": { "NIJI": 247, "NITS": 117 } },
+                "TS": { "connect": { "NISI": 117, "NIKT": 254 } },
+                "KT": { "connect": { "NITS": 254, "NITA": 97 } },
+                "TA": { "connect": { "NIKT": 97, "NINA": 121 } },
+                "NA": { "connect": { "NITA": 121, "NINV": 51 } },
+                "NV": { "connect": { "NINA": 51, "NINK": 157 } },
+                "NK": { "connect": { "NINV": 157, "NICN": 58 } },
+                "CN": { "connect": { "NINK": 58, "NIKH": 189 } },
+                "KH": {
+                    "point": { "NICN": 189 },
+                    "connect": { "NISG": 91 }
+                },
+                "SG": { "connect": { "NIKH": 91, "NIFU": 48 } },
+                "FU": { "connect": { "NISG": 48, "NISJ": 56 } },
+                "SJ": { "connect": { "NIFU": 56, "NIMN": 41 } },
+                "MN": { "connect": { "NISJ": 41, "NIMR": 96 } },
+                "MR": { "connect": { "NIMN": 96, "NINR": 151 } },
+                "NR": { "connect": { "NIMR": 151, "NIJI": 169 } }
+            }
+        },
+        "NA": {
+            "name": "空港線",
+            "company": "はる近郊鉄道",
+            "author": "hnakai0909",
+            "color": "#DBCC75",
+            "stations": {
+                "KH": {
+                    "share": [ "NIKH" ],
+                    "point": { "NAJJ": 193 }
+                },
+                "JJ": { "connect": { "NAKH": 193, "NAKN": 79 } },
+                "KN": { "connect": { "NAJJ": 79 } }
+            }
+        },
+        "KC": {
+            "name": "千歳線",
+            "company": "こむぎ娘レールウェイ",
+            "author": "flour4445",
+            "color": "#969182",
+            "stations": {
+                "YY": { "connect": { "KCTE": 219 } },
+                "TE": { "connect": { "KCYY": 219, "KCDS": 462 } },
+                "DS": { "connect": { "KCTE": 462, "KCTO": 319 } },
+                "TO": { "connect": { "KCDS": 319, "KCHI": 288 } },
+                "HI": {
+                    "connect": { "KCTO": 288, "KCCT": 450 },
+                    "pass_night": true
+                },
+                "CT": { "connect": { "KCHI": 450, "KCMC": 166 } },
+                "MC": {
+                    "connect": { "KCCT": 166, "KCSN": 517 },
+                    "pass_night": true
+                },
+                "SN": { "connect": { "KCMC": 517 } }
+            }
+        },
+        "KK": {
+            "name": "海岸線",
+            "company": "こむぎ娘レールウェイ",
+            "author": "flour4445",
+            "color": "#969182",
+            "stations": {
+                "CT": { "connect": { "KKCK": 177 } },
+                "CK": { "connect": { "KKCT": 177 } }
+            }
+        },
+        "KS": {
+            "name": "作長線",
+            "company": "こむぎ娘レールウェイ",
+            "author": "flour4445",
+            "color": "#969182",
+            "stations": {
+                "SN": { "connect": { "KSXG": 562 } },
+                "XG": { "connect": { "KSSN": 562, "KSFK": 617 } },
+                "FK": { "connect": { "KSXG": 617, "KSOT": 1170 } },
+                "OT": { "connect": { "KSFK": 1170, "KSMI": 522 } },
+                "MI": { "connect": { "KSOT": 522, "KSOD": 373 } },
+                "OD": { "connect": { "KSMI": 373, "KSCC": 264 } },
+                "CC": { "connect": { "KSOD": 264 } }
+            }
+        },
+        "KT": {
+            "name": "東海線",
+            "company": "こむぎ娘レールウェイ",
+            "author": "flour4445",
+            "color": "#969182",
+            "stations": {
+                "OT": { "connect": { "KTQM": 933 } },
+                "QM": { "connect": { "KTOT": 933, "KTSS": 761 } },
+                "SS": { "connect": { "KTQM": 761, "KTKA": 756 } },
+                "KA": { "connect": { "KTSS": 756 } }
+            }
+        },
+        "LT": {
+            "name": "東部環状線",
+            "company": "東部環状鉄道",
+            "author": "ayafmy",
+            "color": "#B7D120",
+            "stations": {
+                "HH": { "connect": { "LTGZ": 0, "LTTA": 107 } },
+                "TA": { "connect": { "LTHH": 107, "LTNA": 290 } },
+                "NA": { "connect": { "LTTA": 290, "LTKM": 117 } },
+                "KM": { "connect": { "LTNA": 117, "LTYA": 224 } },
+                "YA": { "connect": { "LTKM": 224, "LTTT": 370 } },
+                "TT": { "connect": { "LTYA": 370, "LTJT": 526 } },
+                "JT": { "connect": { "LTTT": 526, "LTTF": 423 } },
+                "TF": { "connect": { "LTJT": 423, "LTSC": 351 } },
+                "SC": { "connect": { "LTTF": 351, "LTCC": 302 } },
+                "CC": { "connect": { "LTSC": 302, "LTNT": 115 } },
+                "NT": { "connect": { "LTCC": 115, "LTKY": 301 } },
+                "KY": { "connect": { "LTNT": 301, "LTSU": 187 } },
+                "SU": { "connect": { "LTKY": 187, "LTMS": 140 } },
+                "MS": { "connect": { "LTSU": 140, "LTNJ": 145 } },
+                "NJ": { "connect": { "LTMS": 145, "LTMR": 96 } },
+                "MR": { "connect": { "LTNJ": 96, "LTSB": 206 } },
+                "SB": { "connect": { "LTMR": 206, "LTGZ": 122 } },
+                "GZ": { "connect": { "LTSB": 122, "LTHH": 74 } }
+            }
+        },
+        "TR": {
+            "name": "りんかい線",
+            "company": "筑波臨海高速鉄道",
+            "author": "karno",
+            "color": "#047391",
+            "stations": {
+                "CC": { "connect": { "TRSC": 140 } },
+                "SC": { "connect": { "TRCC": 140, "TRSH": 80 } },
+                "SH": { "connect": { "TRSC": 80, "TRTD": 86 } },
+                "TD": { "connect": { "TRSH": 86, "TRTK": 90 } },
+                "TK": { "connect": { "TRTD": 90, "TRST": 98 } },
+                "ST": { "connect": { "TRTK": 98, "TRTU": 97 } },
+                "TU": { "connect": { "TRST": 97, "TROR": 193, "TRSK": 279 } },
+                "OA": { "connect": { "TRTU": 193, "TRHS": 137 } },
+                "HS": { "connect": { "TROA": 137, "TRKA": 425 } },
+                "KA": { "connect": { "TRHS": 425 } },
+                "SK": { "connect": { "TRTU": 278, "TRSO": 110 } },
+                "SO": { "connect": { "TRSK": 110, "TRSS": 172 } },
+                "SS": { "connect": { "TRSO": 172, "TR": 0 } }
+            }
+        },
+        "GR": {
+            "name": "竜ヶ崎線",
+            "company": "竜ヶ崎臨海鉄道",
+            "author": "unknown",
+            "color": "#FFEB7C",
+            "stations": {
+                "TK": { "connect": { "GRRS": 263 } },
+                "RS": { "connect": { "GRTK": 263, "GRKZ": 178 } },
+                "KZ": { "connect": { "GRRS": 178, "GRSS": 508 } },
+                "SS": { "connect": { "GRKZ": 508 } }
+            }
+        },
+        "JC": {
+            "name": "ちくわエクスプレス線",
+            "company": "ささみ鉄道",
+            "author": "sasamijp",
+            "color": "#D59758",
+            "stations": {
+                "HH": { "connect": { "JCDM": 196 } },
+                "DM": { "connect": { "JCHH": 196, "JCSI": 234 } },
+                "SI": { "connect": { "JCDM": 234, "JCNM": 176 } },
+                "NM": { "connect": { "JCSI": 176, "JCYY": 210 } },
+                "YY": { "connect": { "JCNM": 210 } }
+            }
+        },
+        "ZC": {
+            "name": "Capital Line",
+            "company": "hu2r railway",
+            "author": "hu2r",
+            "color": "#F3A6A3",
+            "stations": {
+                "FU": { "connect": { "ZCSJ": 78 } },
+                "SJ": { "connect": { "ZCFU": 78, "ZCMR": 148 } },
+                "MR": { "connect": { "ZCSJ": 148 } }
+            }
+        },
+        "ZG": {
+            "name": "外環線",
+            "company": "SRH",
+            "author": "hadsn",
+            "color": "#71E700",
+            "stations": {
+                "TK": { "connect": { "ZGNS": 338 } },
+                "NS": { "connect": { "ZGTK": 338 } }
+            }
+        },
+        "ZH": {
+            "name": "姫子線",
+            "company": "かき地下鉄",
+            "author": "kakiht",
+            "color": "#5E53A1",
+            "stations": {
+                "YT": {
+                    "share": [ "HDYT" ],
+                    "point": { "ZHHE": 277 }
+                },
+                "HE": { "connect": { "ZHYT": 277, "ZHHM": 305 } },
+                "HM": { "connect": { "ZHHE": 305 } }
+            }
+        },
+        "ZT": {
+            "name": "調布市地下鉄線",
+            "company": "はる地下鉄",
+            "author": "unknown",
+            "color": "#9C0065",
+            "stations": {
+                "TF": { "connect": { "ZTHT": 121 } },
+                "HT": { "connect": { "ZTTF": 121, "ZTNS": 86 } },
+                "NS": { "connect": { "ZTHT": 86, "ZTHS": 170 } },
+                "HS": { "connect": { "ZTNS": 170 } }
+            }
+        },
+        "AT": {
+            "name": "はる空港-津ヘリポート線",
+            "company": "はる航空",
+            "author": "fubukiefsf",
+            "color": "#00A884",
+            "airline": true,
+            "stations": {
+                "AA": { "connect": { "ATTT": 0 } },
+                "TT": { "connect": { "ATAA": 0 } }
+            }
+        },
+        "AS": {
+            "name": "はる空港-しきみ島線",
+            "company": "はる航空",
+            "author": "fubukiefsf",
+            "color": "#00A884",
+            "airline": true,
+            "stations": {
+                "AA": { "connect": { "ASSL": 0 } },
+                "SL": { "connect": { "ASAA": 0 } }
+            }
+        },
+        "AO": {
+            "name": "はる空港-大室線",
+            "company": "はる航空",
+            "author": "fubukiefsf",
+            "color": "#00A884",
+            "airline": true,
+            "stations": {
+                "AA": { "connect": { "AOOM": 0 } },
+                "OM": { "connect": { "AOAA": 0 } }
+            }
+        },
     },
     "transfer": {
         "AA": [ "AOAA", "ASAA", "ATAA", "HZAA", "MMAA", "SCAA" ],
