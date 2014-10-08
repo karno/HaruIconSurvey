@@ -692,7 +692,7 @@
                 "AA": { "connect": { "AOOM": 0 } },
                 "OM": { "connect": { "AOAA": 0 } }
             }
-        },
+        }
     },
     "transfer": {
         "AA": [ "AOAA", "ASAA", "ATAA", "HZAA", "MMAA", "SCAA" ],
