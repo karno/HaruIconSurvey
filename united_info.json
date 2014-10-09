@@ -105,7 +105,7 @@
                 },
                 "TT": {
                     "share": [ "HCTT" ],
-                    "connect": { "YT": 221 }
+                    "connect": { "HDYT": 221 }
                 }
             }
         },
@@ -122,7 +122,7 @@
                 "YB": { "connect": { "HEYA": 126, "HEGJ": 238 } },
                 "GJ": {
                     "share": [ "HGGJ" ],
-                    "point": { "HEYB": 238, "HEMG": 170 },
+                    "point": { "HEYB": 238 },
                     "connect": { "HEFT": 304 }
                 },
                 "FT": { "connect": { "HEGJ": 304, "HEKD": 526 } },
