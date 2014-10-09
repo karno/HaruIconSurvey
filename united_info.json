@@ -222,7 +222,7 @@
                     "share": [ "HCKN" ],
                     "connect": { "HZAA": 323 }
                 },
-                "HZAA": { "connect": { "HZKN": 258 } }
+                "AA": { "connect": { "HZKN": 258 } }
             }
         },
         "MM": {
@@ -579,13 +579,13 @@
                 "TD": { "connect": { "TRSH": 86, "TRTK": 90 } },
                 "TK": { "connect": { "TRTD": 90, "TRST": 98 } },
                 "ST": { "connect": { "TRTK": 98, "TRTU": 97 } },
-                "TU": { "connect": { "TRST": 97, "TROR": 193, "TRSK": 279 } },
+                "TU": { "connect": { "TRST": 97, "TROA": 193, "TRSK": 279 } },
                 "OA": { "connect": { "TRTU": 193, "TRHS": 137 } },
                 "HS": { "connect": { "TROA": 137, "TRKA": 425 } },
                 "KA": { "connect": { "TRHS": 425 } },
                 "SK": { "connect": { "TRTU": 278, "TRSO": 110 } },
                 "SO": { "connect": { "TRSK": 110, "TRSS": 172 } },
-                "SS": { "connect": { "TRSO": 172, "TR": 0 } }
+                "SS": { "connect": { "TRSO": 172 } }
             }
         },
         "GR": {
