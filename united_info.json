@@ -273,7 +273,7 @@
                 "GJ": { "connect": { "RNKM": 756 } },
                 "KM": { "connect": { "RNGJ": 756, "RNHH": 612 } },
                 "HH": {
-                    "share": [ "HXHH" ],
+                    "share": [ "EXHH" ],
                     "connect": { "RNKM": 612 }
                 }
             }
@@ -303,7 +303,7 @@
             "stations": {
                 "HH": {
                     "share": [ "RJHH" ],
-                    "connect": { "RJGZ": 80 }
+                    "connect": { "RTGZ": 80 }
                 },
                 "GZ": { "connect": { "RTHH": 80, "RTMN": 122 } },
                 "MN": { "connect": { "RTGZ": 122, "RTKC": 141 } },
