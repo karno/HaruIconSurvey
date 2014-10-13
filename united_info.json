@@ -547,7 +547,7 @@
             "author": "ayafmy",
             "color": "#B7D120",
             "stations": {
-                "HH": { "connect": { "LTGZ": 0, "LTTA": 107 } },
+                "HH": { "connect": { "LTGZ": 74, "LTTA": 107 } },
                 "TA": { "connect": { "LTHH": 107, "LTNA": 290 } },
                 "NA": { "connect": { "LTTA": 290, "LTKM": 117 } },
                 "KM": { "connect": { "LTNA": 117, "LTYA": 224 } },
@@ -680,8 +680,8 @@
             "color": "#00A884",
             "airline": true,
             "stations": {
-                "AA": { "connect": { "ATTT": 0 } },
-                "TT": { "connect": { "ATAA": 0 } }
+                "AA": { "connect": { "ATTT": 1 } },
+                "TT": { "connect": { "ATAA": 1 } }
             }
         },
         "AS": {
@@ -691,8 +691,8 @@
             "color": "#00A884",
             "airline": true,
             "stations": {
-                "AA": { "connect": { "ASSL": 0 } },
-                "SL": { "connect": { "ASAA": 0 } }
+                "AA": { "connect": { "ASSL": 1 } },
+                "SL": { "connect": { "ASAA": 1 } }
             }
         },
         "AO": {
@@ -702,8 +702,8 @@
             "color": "#00A884",
             "airline": true,
             "stations": {
-                "AA": { "connect": { "AOOM": 0 } },
-                "OM": { "connect": { "AOAA": 0 } }
+                "AA": { "connect": { "AOOM": 1 } },
+                "OM": { "connect": { "AOAA": 1 } }
             }
         }
     },
