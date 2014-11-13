@@ -125,13 +125,13 @@
                     "point": { "HEYAB": 238 },
                     "connect": { "HEFUT": 304 }
                 },
-                "FUT": { "connect": { "HEGEJ": 304, "HEKAE": 526 } },
-                "KAE": {
-                    "share": [ "HHKAE" ],
+                "FUT": { "connect": { "HEGEJ": 304, "HEKAD": 526 } },
+                "KAD": {
+                    "share": [ "HHKAD" ],
                     "point": { "HEOMR": 348 },
                     "connect": { "HEFUT": 526 }
                 },
-                "OMR": { "connect": { "HEKAE": 348 } }
+                "OMR": { "connect": { "HEKAD": 348 } }
             }
         },
         "HF": {
@@ -147,9 +147,9 @@
                 "JIC": { "connect": { "HFJIR": 165, "HFNIT": 306 } },
                 "NIT": { "connect": { "HFJIC": 306, "HFCCC": 309 } },
                 "CCC": { "connect": { "HFNIT": 309, "HFTSB": 199 } },
-                "TSB": { "connect": { "HFCCC": 199, "HFTST": 212 } },
-                "TST": { "connect": { "HFTSB": 212, "HFSHZ": 187 } },
-                "SHZ": { "connect": { "HFTST": 187, "HFSHE": 225 } },
+                "TSB": { "connect": { "HFCCC": 199, "HFTSU": 212 } },
+                "TSU": { "connect": { "HFTSB": 212, "HFSHZ": 187 } },
+                "SHZ": { "connect": { "HFTSU": 187, "HFSHE": 225 } },
                 "SHE": { "connect": { "HFSHZ": 225, "HFSSS": 124 } },
                 "SSS": { "connect": { "HFSHE": 124 } }
             }
@@ -187,12 +187,12 @@
             "author": "fubukiefsf",
             "color": "#000000",
             "stations": {
-                "KAE": {
-                    "share": [ "HEKAE" ],
+                "KAD": {
+                    "share": [ "HEKAD" ],
                     "point": { "HHAOH": 565 }
                 },
                 "AOH": {
-                    "connect": { "HHKAE": 565, "HHSKV": 323 },
+                    "connect": { "HHKAD": 565, "HHSKV": 323 },
                     "pass_night": true
                 },
                 "SKV": { "connect": { "HHAOH": 323, "HHSKP": 258 } },
@@ -287,11 +287,11 @@
                 "EEE": { "connect": { "RJNTS": 599 } },
                 "NTS": { "connect": { "RJEEE": 599, "RJNNC": 193 } },
                 "NNC": { "connect": { "RJNTS": 193, "RJJJJ": 143 } },
-                "JJJ": { "connect": { "RJNNC": 143, "RJKEI": 192 } },
-                "KEI": { "connect": { "RJJJJ": 192, "RJHHH": 314 } },
+                "JJJ": { "connect": { "RJNNC": 143, "RJKEE": 192 } },
+                "KEE": { "connect": { "RJJJJ": 192, "RJHHH": 314 } },
                 "HHH": {
                     "share": [ "RTHHH" ],
-                    "connect": { "RJKEI": 314 }
+                    "connect": { "RJKEE": 314 }
                 }
             }
         },
@@ -339,9 +339,9 @@
             "stations": {
                 "NMU": { "connect": { "ETICJ": 196 } },
                 "ICJ": { "connect": { "ETNMU": 196, "ETSAB": 170 } },
-                "SAB": { "connect": { "ETICJ": 170, "ETTSY": 241 } },
-                "TSY": { "connect": { "ETSAB": 241, "ETSNM": 163 } },
-                "SNM": { "connect": { "ETTSY": 163, "ETIBY": 122 } },
+                "SAB": { "connect": { "ETICJ": 170, "ETTYS": 241 } },
+                "TYS": { "connect": { "ETSAB": 241, "ETSNM": 163 } },
+                "SNM": { "connect": { "ETTYS": 163, "ETIBY": 122 } },
                 "IBY": { "connect": { "ETSNM": 122, "ETYYY": 74 } },
                 "YYY": { "connect": { "ETIBY": 74, "ETYUO": 299 } },
                 "YUO": { "connect": { "ETYYY": 299, "ETKAI": 210 } },
@@ -359,10 +359,10 @@
             "stations": {
                 "HHH": {
                     "share": [ "RNHHH" ],
-                    "connect": { "EXTSY": 361 }
+                    "connect": { "EXTYS": 361 }
                 },
-                "TSY": { "connect": { "EXHHH": 361, "EXYYY": 348 } },
-                "YYY": { "connect": { "EXTSY": 348, "EXKAI": 415 } },
+                "TYS": { "connect": { "EXHHH": 361, "EXYYY": 348 } },
+                "YYY": { "connect": { "EXTYS": 348, "EXKAI": 415 } },
                 "KAI": { "connect": { "EXYYY": 415, "EXNAF": 356 } },
                 "NAF": { "connect": { "EXKAI": 356 } }
             }
@@ -390,11 +390,11 @@
             "author": "karno",
             "color": "#4210D2",
             "stations": {
-                "TSY": {
-                    "share": [ "ESTSY" ],
+                "TYS": {
+                    "share": [ "ESTYS" ],
                     "connect": { "EKKOT": 214 }
                 },
-                "KOT": { "connect": { "EKTSY": 214, "EKSAB": 125 } },
+                "KOT": { "connect": { "EKTYS": 214, "EKSAB": 125 } },
                 "SAB": { "connect": { "EKKOT": 125, "EKHIZ": 281 } },
                 "HIZ": { "connect": { "EKSAB": 281, "EKEEE": 253 } },
                 "EEE": { "connect": { "EKHIZ": 253, "EKYOZ": 131 } },
@@ -407,11 +407,11 @@
             "author": "karno",
             "color": "#E4007F",
             "stations": {
-                "TSY": {
-                    "share": [ "EKTSY" ],
+                "TYS": {
+                    "share": [ "EKTYS" ],
                     "connect": { "ESTSS": 97 }
                 },
-                "TSS": { "connect": { "ESTSY": 97, "ESSIB": 243 } },
+                "TSS": { "connect": { "ESTYS": 97, "ESSIB": 243 } },
                 "SIB": { "connect": { "ESTSS": 243 } }
             }
         },
@@ -455,12 +455,12 @@
                 "NTS": { "connect": { "NITAI": 121, "NINMU": 51 } },
                 "NMU": { "connect": { "NINTS": 51, "NINNO": 157 } },
                 "NNO": { "connect": { "NINMU": 157, "NINNC": 58 } },
-                "NNC": { "connect": { "NINNO": 58, "NIKEI": 189 } },
-                "KEI": {
+                "NNC": { "connect": { "NINNO": 58, "NIKEE": 189 } },
+                "KEE": {
                     "point": { "NINNC": 189 },
                     "connect": { "NISHK": 91 }
                 },
-                "SHK": { "connect": { "NIKEI": 91, "NIFUO": 48 } },
+                "SHK": { "connect": { "NIKEE": 91, "NIFUO": 48 } },
                 "FUO": { "connect": { "NISHK": 48, "NISHJ": 56 } },
                 "SHJ": { "connect": { "NIFUO": 56, "NIMIN": 41 } },
                 "MIN": { "connect": { "NISHJ": 41, "NIMIH": 96 } },
@@ -474,11 +474,11 @@
             "author": "hnakai0909",
             "color": "#DBCC75",
             "stations": {
-                "KEI": {
-                    "share": [ "NIKEI" ],
+                "KEE": {
+                    "share": [ "NIKEE" ],
                     "point": { "NAJJJ": 193 }
                 },
-                "JJJ": { "connect": { "NAKEI": 193, "NAAAN": 79 } },
+                "JJJ": { "connect": { "NAKEE": 193, "NAAAN": 79 } },
                 "AAN": { "connect": { "NAJJJ": 79 } }
             }
         },
@@ -575,15 +575,15 @@
             "stations": {
                 "CCC": { "connect": { "TRCCN": 140 } },
                 "CCN": { "connect": { "TRCCC": 140, "TRSHT": 80 } },
-                "SHT": { "connect": { "TRCCN": 80, "TRTSU": 86 } },
-                "TSU": { "connect": { "TRSHT": 86, "TRTSB": 90 } },
-                "TSB": { "connect": { "TRTSU": 90, "TRSAT": 98 } },
-                "SAT": { "connect": { "TRTSB": 98, "TRTST": 97 } },
-                "TST": { "connect": { "TRSAT": 97, "TROAR": 193, "TRSHZ": 279 } },
-                "OAR": { "connect": { "TRTST": 193, "TRHAS": 137 } },
+                "SHT": { "connect": { "TRCCN": 80, "TRTSD": 86 } },
+                "TSD": { "connect": { "TRSHT": 86, "TRTSB": 90 } },
+                "TSB": { "connect": { "TRTSD": 90, "TRSAT": 98 } },
+                "SAT": { "connect": { "TRTSB": 98, "TRTSU": 97 } },
+                "TSU": { "connect": { "TRSAT": 97, "TROAR": 193, "TRSHZ": 279 } },
+                "OAR": { "connect": { "TRTSU": 193, "TRHAS": 137 } },
                 "HAS": { "connect": { "TROAR": 137, "TRKAS": 425 } },
                 "KAS": { "connect": { "TRHAS": 425 } },
-                "SHZ": { "connect": { "TRTST": 278, "TRSIM": 110 } },
+                "SHZ": { "connect": { "TRTSU": 278, "TRSIM": 110 } },
                 "SIM": { "connect": { "TRSHZ": 110, "TRSSS": 172 } },
                 "SSS": { "connect": { "TRSIM": 172 } }
             }
@@ -606,7 +606,7 @@
             "author": "sasamijp",
             "color": "#D59758",
             "stations": {
-				"HHH": { "connect": { "CCDAM": 196 } },
+                "HHH": { "connect": { "CCDAM": 196 } },
                 "DAM": { "connect": { "CCHHH": 196, "CCSAO": 234 } },
                 "SAO": { "connect": { "CCDAM": 234, "CCNEM": 176 } },
                 "NEM": { "connect": { "CCSAO": 176, "CCYYY": 210 } },
@@ -659,6 +659,16 @@
                 "HAI": { "connect": { "ZKYUH": 69, "ZKREH": 83 } },
                 "REH": { "connect": { "ZKHAI": 83, "ZKYUK": 61 } },
                 "YUK": { "connect": { "ZKREH": 61 } }
+            }
+        },
+        "ZS": {
+            "name": "寿司線",
+            "company": "鮭の子村交通局",
+            "author": "RFC4627",
+            "color": "#CB4E51",
+            "stations": {
+                "SKV": { "connect": { "ZSSHI": 730 } },
+                "SHI": { "connect": { "ZSSKV": 730 } }
             }
         },
         "ZT": {
@@ -723,8 +733,8 @@
         "JOT": [ "HCJOT", "LTJOT" ],
         "KAS": [ "KTKAS", "MKKAS", "MMKAS", "TRKAS" ],
         "KAN": [ "HIKAN", "MKKAN" ],
-        "KAE": [ "HEKAE", "HHKAE" ],
-        "KEI": [ "NAKEI", "NIKEI", "RJKEI" ],
+        "KAD": [ "HEKAD", "HHKAD" ],
+        "KEE": [ "NAKEE", "NIKEE", "RJKEE" ],
         "KAI": [ "ENKAI", "ETKAI", "EXKAI" ],
         "KIM": [ "LTKIM", "RNKIM" ],
         "AAN": [ "HCAAN", "HZAAN", "NAAAN" ],
@@ -751,6 +761,7 @@
         "SAO": [ "CCSAO", "NISAO" ],
         "SHJ": [ "NISHJ", "ZCSHJ" ],
         "SHZ": [ "HFSHZ", "TRSHZ" ],
+        "SKV": [ "HHSKV", "ZSSKV" ],
         "SAN": [ "ENSAN", "KCSAN", "KSSAN" ],
         "SSS": [ "GRSSS", "HFSSS", "KTSSS", "SCSSS", "TRSSS" ],
         "TAI": [ "LTTAI", "NITAI" ],
@@ -760,8 +771,8 @@
         "TOT": [ "ENTOT", "KCTOT" ],
         "TSS": [ "ESTSS", "NITSS" ],
         "TTT": [ "ATTTT", "HCTTT", "HDTTT", "LTTTT", "SNTTT" ],
-        "TST": [ "HFTST", "TRTST" ],
-        "TSY": [ "EKTSY", "ESTSY", "ETTSY", "EXTSY" ],
+        "TSU": [ "HFTSU", "TRTSU" ],
+        "TYS": [ "EKTYS", "ESTYS", "ETTYS", "EXTYS" ],
         "YAA": [ "HDYAA", "HEYAA", "LTYAA" ],
         "YAB": [ "HEYAB", "HGYAB" ],
         "YTH": [ "HDYTH", "ZHYTH" ],
@@ -808,7 +819,7 @@
             "YAB": [ -279, 73, -473, "北宿木", "きたやどき" ],
             "GEJ": [ -279, 73, -708, "善通寺", "ぜんつうじ" ],
             "FUT": [ -279, 73, -1012, "古谷", "ふるたに" ],
-            "KAE": [ -279, 73, -1537, "楓", "かえで" ],
+            "KAD": [ -279, 73, -1537, "楓", "かえで" ],
             "OMR": [ -279, 73, -1885, "大室", "おおむろ" ]
         },
         "HF": {
@@ -817,7 +828,7 @@
             "NIT": [ 44, 71, 655, "新津", "にいつ" ],
             "CCC": [ 353, 65, 655, "長府", "ちょうふ" ],
             "TSB": [ 552, 67, 655, "筑波", "つくば" ],
-            "TST": [ 764, 67, 655, "土浦", "つちうら" ],
+            "TSU": [ 764, 67, 655, "土浦", "つちうら" ],
             "SHZ": [ 866, 67, 743, "下北沢", "しもきたざわ" ],
             "SHE": [ 1025, 67, 808, "東北沢", "ひがしきたざわ" ],
             "SSS": [ 1043, 57, 914, "下関", "しものせき" ]
@@ -835,7 +846,7 @@
             "ZZZ": [ -1703, 73, 4, "<仮駅>", "かりえき" ]
         },
         "HH": {
-            "KAE": [ -279, 73, -1537, "楓", "かえで" ],
+            "KAD": [ -279, 73, -1537, "楓", "かえで" ],
             "AOH": [ 268, 73, -1559, "青木ヶ原", "あおきがはら" ],
             "SKV": [ 574, 73, -1536, "鮭の子村", "しゃけのこむら" ],
             "SKP": [ 574, 73, -1278, "鮭の子港", "しゃけのここう" ]
@@ -858,7 +869,7 @@
             "NTS": [ -416, 41, 96, "中津", "なかつ" ],
             "NNC": [ -227, 46, 90, "地下鉄中野", "ちかてつなかの" ],
             "JJJ": [ -84, 48, 89, "城南", "じょうなん" ],
-            "KEI": [ -141, 44, 225, "刑務所東", "けいむしょひがし" ],
+            "KEE": [ -141, 44, 225, "刑務所東", "けいむしょひがし" ],
             "HHH": [ -261, 59, 346, "役場前", "やくばまえ" ]
         },
         "RT": {
@@ -880,7 +891,7 @@
             "NMU": [ -357, 64, 153, "中村本町", "なかむらほんまち" ],
             "ICJ": [ -496, 76, 184, "一条", "いちじょう" ],
             "SAB": [ -621, 75, 230, "西原", "さいばら" ],
-            "TSY": [ -562, 72, 416, "月屋根沢", "つきやねさわ" ],
+            "TYS": [ -562, 72, 416, "月屋根沢", "つきやねさわ" ],
             "SNM": [ -564, 72, 580, "スノーマン前", "すのーまんまえ" ],
             "IBY": [ -564, 72, 702, "伊吹山", "いぶきやま" ],
             "YYY": [ -596, 69, 747, "雪見町", "ゆきみまち" ],
@@ -892,7 +903,7 @@
         },
         "EX": {
             "HHH": [ -277, 59, 346, "役場前", "やくばまえ" ],
-            "TSY": [ -562, 72, 416, "月屋根沢", "つきやねさわ" ],
+            "TYS": [ -562, 72, 416, "月屋根沢", "つきやねさわ" ],
             "YYY": [ -598, 74, 747, "雪見町", "ゆきみまち" ],
             "KAI": [ -1013, 77, 747, "上砂", "かみいさご" ],
             "NAF": [ -1308, 67, 815, "南海埠頭", "なんかいふとう" ]
@@ -906,7 +917,7 @@
             "SAN": [ -1669, 64, 1980, "作並", "さくなみ" ]
         },
         "EK": {
-            "TSY": [ -553, 72, 416, "月屋根沢", "つきやねさわ" ],
+            "TYS": [ -553, 72, 416, "月屋根沢", "つきやねさわ" ],
             "KOT": [ -519, 76, 249, "こむぎこタワー", "こむぎこたわー" ],
             "SAB": [ -629, 75, 230, "西原", "さいばら" ],
             "HIZ": [ -834, 64, 190, "雲雀坂", "ひばりざか" ],
@@ -914,7 +925,7 @@
             "YOZ": [ -944, 49, -6, "夜築町", "よづきまち" ]
         },
         "ES": {
-            "TSY": [ -553, 72, 416, "月屋根沢", "つきやねさわ" ],
+            "TYS": [ -553, 72, 416, "月屋根沢", "つきやねさわ" ],
             "TSS": [ -519, 79, 478, "月山神社", "つきやまじんじゃ" ],
             "SIB": [ -321, 64, 499, "新橋", "しんばし" ]
         },
@@ -956,7 +967,7 @@
             "NMU": [ -379, 55, 96, "中村", "なかむら" ],
             "NNO": [ -258, 74, 83, "中野", "なかの" ],
             "NNC": [ -223, 54, 90, "地下鉄中野", "ちかてつなかの" ],
-            "KEI": [ -162, 66, 222, "刑務所東", "けいむしょひがし" ],
+            "KEE": [ -162, 66, 222, "刑務所東", "けいむしょひがし" ],
             "SHK": [ -173, 72, 308, "湘南海岸", "しょうなんかいがん" ],
             "FUO": [ -175, 72, 355, "藤が丘東", "ふじがおかひがし" ],
             "SHJ": [ -173, 47, 411, "しきみ城", "しきみじょう" ],
@@ -965,7 +976,7 @@
             "NMO": [ -249, 47, 654, "中森", "なかもり" ]
         },
         "NA": {
-            "KEI": [ -162, 66, 222, "刑務所東", "けいむしょひがし" ],
+            "KEE": [ -162, 66, 222, "刑務所東", "けいむしょひがし" ],
             "JJJ": [ -92, 63, 96, "城南", "じょうなん" ],
             "AAN": [ -35, 49, 94, "空港北", "くうこうきた" ]
         },
@@ -1022,10 +1033,10 @@
             "CCC": [ 333, 61, 674, "長府", "ちょうふ" ],
             "CCN": [ 362, 64, 576, "新長府", "しんちょうふ" ],
             "SHT": [ 434, 66, 566, "新都心", "しんとしん" ],
-            "TSU": [ 520, 68, 566, "筑波大学", "つくばだいがく" ],
+            "TSD": [ 520, 68, 566, "筑波大学", "つくばだいがく" ],
             "TSB": [ 556, 64, 630, "筑波", "つくば" ],
             "SAT": [ 653, 64, 630, "桜土浦", "さくらつちうら" ],
-            "TST": [ 758, 69, 626, "土浦", "つちうら" ],
+            "TSU": [ 758, 69, 626, "土浦", "つちうら" ],
             "OAR": [ 764, 67, 447, "大洗", "おおあらい" ],
             "HAS": [ 765, 64, 310, "浜坂", "はまさか" ],
             "KAS": [ 1177, 64, 290, "香住", "かすみ" ],
@@ -1078,6 +1089,10 @@
             "HAI": [ -221, 9, 300, "はるアイコン", "はるあいこん" ],
             "REH": [ -142, 8, 291, "れいかハウス", "れいかはうす" ],
             "YUK": [ -82, 10, 291, "ゆっくりライン貨物ターミナル", "ゆっくりらいんかもつたーみなる" ]
+        },
+        "ZS": {
+            "SKV": [ 631, 63, -1471, "鮭の子村", "しゃけのこむら" ],
+            "SHI": [ 754, 65, -868, "しきみ島", "しきみじま" ]
         },
         "ZT": {
             "TYF": [ 407, 49, 336, "調布", "ちょうふ" ],
