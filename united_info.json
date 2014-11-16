@@ -337,7 +337,10 @@
             "author": "karno",
             "color": "#FF0000",
             "stations": {
-                "NMU": { "connect": { "ETICJ": 196 } },
+                "NMU": {
+                    "share": [ "ECNMU" ],
+                    "connect": { "ETICJ": 196 }
+                },
                 "ICJ": { "connect": { "ETNMU": 196, "ETSAB": 170 } },
                 "SAB": { "connect": { "ETICJ": 170, "ETTYS": 241 } },
                 "TYS": { "connect": { "ETSAB": 241, "ETSNM": 163 } },
@@ -413,6 +416,22 @@
                 },
                 "TSS": { "connect": { "ESTYS": 97, "ESSIB": 243 } },
                 "SIB": { "connect": { "ESTSS": 243 } }
+            }
+        },
+        "EC": {
+            "name": "中部丘陵線",
+            "company": "はる急行鉄道",
+            "author": "karno",
+            "color": "#A0522D",
+            "stations": {
+                "NMU": {
+                    "share": [ "ETNMU" ],
+                    "connect": { "ECMCT": 193 }
+                },
+                "MCT": { "connect": { "ECNMU": 193, "ECMOY": 155 } },
+                "MOY": { "connect": { "ECMCT": 155, "ECJOH": 155 } },
+                "JOH": { "connect": { "ECMOY": 155, "ECTSI": 349 } },
+                "TSI": { "connect": { "ECJOH": 349 } }
             }
         },
         "SC": {
@@ -740,16 +759,16 @@
         "KEE": [ "NAKEE", "NIKEE", "RJKEE" ],
         "KIM": [ "LTKIM", "RNKIM" ],
         "KOT": [ "EKKOT", "NIKOT" ],
-        "MCE": [ "HAMCT", "HAMCW", "HDMCT", "HDMCW", "HDMCE", "MMMCE" ],
-        "MCT": [ "HAMCT", "HAMCW", "HDMCT", "HDMCW", "HDMCE", "MMMCE" ],
-        "MCW": [ "HAMCT", "HAMCW", "HDMCT", "HDMCW", "HDMCE", "MMMCE" ],
+        "MCE": [ "HAMCT", "HAMCW", "HDMCT", "HDMCW", "HDMCE", "MMMCE", "ECMCT" ],
+        "MCT": [ "HAMCT", "HAMCW", "HDMCT", "HDMCW", "HDMCE", "MMMCE", "ECMCT" ],
+        "MCW": [ "HAMCT", "HAMCW", "HDMCT", "HDMCW", "HDMCE", "MMMCE", "ECMCT" ],
         "MIH": [ "LTMIH", "NIMIH", "ZCMIH" ],
         "MIN": [ "NIMIN", "RTMIN" ],
         "NAF": [ "ETNAF", "EXNAF" ],
         "NEM": [ "HBNEM", "CCNEM" ],
         "NIS": [ "ZGNIS", "ZTNIS" ],
         "NIT": [ "HFNIT", "LTNIT", "RTNIT" ],
-        "NMU": [ "ETNMU", "HANMU", "NINMU" ],
+        "NMU": [ "ETNMU", "ECNMU", "HANMU", "NINMU" ],
         "NNC": [ "NINNC", "RJNNC" ],
         "NNO": [ "HCNNO", "MMNNO", "NINNO", "RJNNC" ],
         "NTS": [ "LTNTS", "NINTS", "RJNTS" ],
@@ -767,7 +786,7 @@
         "TAI": [ "LTTAI", "NITAI" ],
         "TOT": [ "ENTOT", "KCTOT" ],
         "TSB": [ "GRTSB", "HFTSB", "RTTSB", "TRTSB", "ZGTSB" ],
-        "TSI": [ "HCTSI", "HITSI" ],
+        "TSI": [ "HCTSI", "HITSI", "ECTSI" ],
         "TSS": [ "ESTSS", "NITSS" ],
         "TSU": [ "HFTSU", "TRTSU" ],
         "TTT": [ "ATTTT", "HCTTT", "HDTTT", "LTTTT", "SNTTT" ],
@@ -928,6 +947,13 @@
             "TYS": [ -553, 72, 416, "月屋根沢", "つきやねさわ" ],
             "TSS": [ -519, 79, 478, "月山神社", "つきやまじんじゃ" ],
             "SIB": [ -321, 64, 499, "新橋", "しんばし" ]
+        },
+        "EC": {
+            "NMU": [ -357, 64, 153, "中村本町", "なかむらほんまち" ],
+            "MCT": [ -358, 66, -38, "メガネケエスタワー", "めがねけえすたわー" ],
+            "MOY": [ -233, 65, -73, "守山", "もりやま" ],
+            "JOH": [ -78, 67, -73, "城北", "じょうほく" ],
+            "TSI": [ 198, 64, -151, "津入口", "ついりぐち" ]
         },
         "SC": {
             "EEE": [ -837, 69, -53, "EFB城", "えたーなるふぉーすぶりざーどじょう" ],
