@@ -177,7 +177,7 @@
                 },
                 "EEE": { "connect": { "HGKAM": 341, "HGYOZ": 191 } },
                 "YOZ": { "connect": { "HGEEE": 191, "HGKUY": 459 } },
-                "KUY": { "connect": { "HGYOZ": 459, "HGZZ": 300 } },
+                "KUY": { "connect": { "HGYOZ": 459, "HGZZZ": 300 } },
                 "ZZZ": { "connect": { "HGKUY": 300 } }
             }
         },
