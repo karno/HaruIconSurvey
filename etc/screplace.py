@@ -28,7 +28,7 @@ for line in fr:
 	# replace simple station id
     for key, value in map_table.items():
         line = line.replace(wrap(key), wrap(value));
-	# replace fully-qualified station id
+    # replace fully-qualified station id
     for key, value in map_table.items():
         for lcode in lines:
             line = line.replace(wrap(lcode + key), wrap(lcode + value));
