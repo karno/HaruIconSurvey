@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 stations = {
     # 特定大規模駅
     "AAA": "はる空港",

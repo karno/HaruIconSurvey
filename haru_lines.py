@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 lines = {
     # H: harutrak - @fubukiefsf
     "HA": "harutrak A線",

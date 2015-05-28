@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 # station code mapping file (2 -> 3)
 map_table = {
     "AA": "AAA",
