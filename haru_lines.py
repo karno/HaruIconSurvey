@@ -12,6 +12,7 @@ lines = {
     "HG": "harutrak G線",
     "HH": "harutrak H線",
     "HI": "harutrak I線",
+    "HJ": "harutrak J線",
     "HZ": "harutrak 空港連絡線",
     # R: はるレール - @ayafmy
     "RN": "はるレール 南北快速線",
@@ -43,6 +44,8 @@ lines = {
     "LT": "東部環状鉄道 東部環状線",
     # T: 筑波臨海高速鉄道 - @karno
     "TR": "筑波臨海高速鉄道 りんかい線",
+    "TT": "筑波臨海高速鉄道 つくば線",
+    "TS": "筑波臨海高速鉄道 下関線",
     # G: 竜ヶ崎臨海鉄道 - ?
     "GR": "竜ヶ崎臨海鉄道 竜ヶ崎線",
     # C: ささみ鉄道 - @sasamijp
