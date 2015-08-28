@@ -49,31 +49,31 @@ public class SurveyorPlugin extends JavaPlugin {
                     // location.setY(location.getY() - 1);
                     if (isRailBlock(location.getBlock())) {
                         player.setMetadata(TICKET, new FixedMetadataValue(this, location));
-                        player.sendMessage(ChatColor.YELLOW + "Successfully started.");
+                        player.sendMessage(ChatColor.YELLOW + "Successfully started. (測量の開始に成功しました。)");
                     } else {
-                        player.sendMessage(ChatColor.RED + "start surveying must be issued on the rail.");
+                        player.sendMessage(ChatColor.RED + "start surveying must be issued on the rail. (測量の開始時には線路上に立っている必要があります。)");
                     }
                     return true;
                 }
                 if (args[0].equalsIgnoreCase("end")) {
                     List<MetadataValue> metadata = player.getMetadata(TICKET);
                     if (metadata.size() == 0) {
-                        player.sendMessage(ChatColor.RED + "surveying is not started.");
+                        player.sendMessage(ChatColor.RED + "surveying is not started. (測量がまだ開始されていません。)");
                         return true;
                     }
                     Location start = (Location) metadata.get(0).value();
                     if (!isRailBlock(start.getBlock())) {
-                        player.sendMessage(ChatColor.RED + "starting block is not a rail (or destructed).");
+                        player.sendMessage(ChatColor.RED + "starting block is not a rail (or destructed). (開始地点がレールではなくなりました。)");
                         return true;
                     }
                     Block finishBlock = player.getLocation().getBlock();
                     if (!isRailBlock(finishBlock)) {
-                        player.sendMessage(ChatColor.RED + "end surveying must be issued on the rail.");
+                        player.sendMessage(ChatColor.RED + "end surveying must be issued on the rail. (測量の終了時には線路上に立っている必要があります。)");
                         return true;
                     }
                     Location finish = finishBlock.getLocation();
                     long timestamp = System.currentTimeMillis();
-                    player.sendMessage(ChatColor.YELLOW + "finding path: " + toDisplayStr(start) + " -> " + toDisplayStr(finish));
+                    player.sendMessage(ChatColor.YELLOW + "finding path : " + toDisplayStr(start) + " -> " + toDisplayStr(finish));
                     /*
                     HashMap<Location, Double> map = new HashMap<Location, Double>();
                     map.put(start, -1.0);
@@ -82,16 +82,24 @@ public class SurveyorPlugin extends JavaPlugin {
                     double result = getShortestTrail(start, finish);
                     long duration = System.currentTimeMillis() - timestamp;
                     if (result >= 0) {
-                        player.sendMessage(ChatColor.GREEN + "OK! (elapsed time:  " + duration + " ms)");
-                        player.sendMessage(ChatColor.GREEN + "distance is " + result + ".");
+                        player.sendMessage(ChatColor.GREEN + "OK! (elapsed time :  " + duration + " ms)");
+                        player.sendMessage(ChatColor.GREEN + "distance is " + result + "." );
                     } else {
-                        player.sendMessage(ChatColor.RED + "could not reach the destination rail.");
+                        player.sendMessage(ChatColor.RED + "could not reach the destination rail. (経路を見つけられませんでした。)");
                     }
 
                     return true;
                 }
+                if (args[0].equalsIgnoreCase("help")) {
+                    player.sendMessage(ChatColor.WHITE + "This plugin let you to survey rail distance between 2 points.");
+                    player.sendMessage(ChatColor.WHITE + " 1. Go begin point and stand on the rail. ");
+                    player.sendMessage(ChatColor.WHITE + " 2. enter command \"/survey begin\".");
+                    player.sendMessage(ChatColor.WHITE + " 3. Go end point and stand on the rail.");
+                    player.sendMessage(ChatColor.WHITE + " 4. enter command \"/survey end\".");
+                    return true;
+                }
             }
-            player.sendMessage(ChatColor.RED + "you must specify argument \"begin\" or \"end\".");
+            player.sendMessage(ChatColor.RED + "you must specify argument \"begin\" , \"end\" or \"help\". (\"begin\" , \"end\" または \"help\"の引数が必要です。)");
             return true;
         }
         return false;
@@ -196,7 +204,7 @@ public class SurveyorPlugin extends JavaPlugin {
             if (flag) {
                 Block rel = block.getRelative(face);
                 if (isRailBlock(rel)) {
-                    result.put(rel.getLocation(), 1.41421356);
+                    result.put(rel.getLocation(), 1.0); //if rail is slant(NANAME)
                 }
             }
         }
