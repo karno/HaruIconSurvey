@@ -4,6 +4,6 @@ version: 0.0.1
 commands:
    survey:
       description: Surveyor command by @karno
-      usage: /<command> begin/end
+      usage: /<command> begin/end/help
       permission: surveyor.survey
       permission-message: You don't have <permission>
