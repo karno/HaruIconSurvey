@@ -1,4 +1,4 @@
-# はるアイコン鯖 測量情報
+﻿# はるアイコン鯖 測量情報
 
 はるアイコン鯖の鉄道網について，路線や駅にIDを付与し，また，それぞれにおいて実地測量調査を行った結果のまとめです．
 
@@ -9,7 +9,9 @@
 ライセンスは <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY 4.0</a> です．
 
 変更があった場合は気軽にpullreqをください．
-各コードの説明は guideline.md をご覧ください．
+各コードの説明は code_guideline.md を,
+測量方法の説明は survey_guideline.md をご覧ください．
+
 
 はるアイコン鯖API: http://api.haruicon.net/
 
