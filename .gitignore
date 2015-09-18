@@ -216,3 +216,14 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+
+#############
+## other
+#############
+
+
+etc/united_info_draft.json
+etc/haru_lines.py
+etc/haru_station_locations.py
+etc/haru_stations.py
