@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-stations = {
+station_names = {
     # 特定大規模駅
     "AAA": ( "はる空港", "はるくうこう" ),
     "CCC": ( "長府", "ちょうふ" ),
@@ -152,7 +152,7 @@ stations = {
 }
 
 # 駅コードは他路線と共有しているが, 特別な駅名が存在する駅の一覧
-special_name_stations = {
+station_special_names = {
     "ETNMU": ( "中村本町", "なかむらほんまち" ),
     "ECNMU": ( "中村本町", "なかむらほんまち" ),
     "ECMCT": ( "メガネケエスタワー", "めがねけえすたわー" ),

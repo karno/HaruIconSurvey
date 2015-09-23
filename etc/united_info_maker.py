@@ -4,39 +4,38 @@
 # (直通などは非対応なので手での修正が必要)
 # 引数:なし
 
-
-import sys, os, pprint
+import sys, os, pprint, json
 from haru_station_locations import station_locations
-from haru_stations import stations
+from haru_stations import station_names, station_special_names
 from haru_lines import lines, company_author, airline, ship
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 tabsize = 4;
-tab1 = '\t'.expandtabs(tabsize);
-tab2 = '\t\t'.expandtabs(tabsize);
-tab3 = '\t\t\t'.expandtabs(tabsize);
-tab4 = '\t\t\t\t'.expandtabs(tabsize);
-tab5 = '\t\t\t\t\t'.expandtabs(tabsize);
+tab1 = (' '*1*tabsize);
+tab2 = (' '*2*tabsize);
+tab3 = (' '*3*tabsize);
+tab4 = (' '*4*tabsize);
+tab5 = (' '*5*tabsize);
 
-def wrap(s):
-	return "\"" + s + "\"";
+pp1 = pprint.PrettyPrinter(indent=tabsize*3, width=999, depth=None, stream=None, compact=False);
+pp2 = pprint.PrettyPrinter(indent=4, width=80, depth=None, stream=None, compact=False);
 
 fr = open("haru_station_locations.py", "r", encoding="utf-8");
 fw = open("united_info_draft.json", "w", encoding="utf-8");
 
 ######################################################
-
+# phase1のみ, pprintを用いず手動でjsonを構築しています。
+# これは, json中にコメントを残したいため・独自の整形をしたいためです。
 print("# phase 1: lines");
 flag_initiated = False;
 fw.write('{\n');
 fw.write('    \"lines\": {\n');
 prev_exist_dist_info, exist_dist_info = False, False;
 prev_sta_options, sta_options = '', '';
-
 # parse haru_station_location.py manually
 for line in fr: # line = 行
-    if line.expandtabs(tabsize).startswith(tab2+'#') :
-        fw.write(tab2+line);
+    if line.expandtabs(tabsize).startswith(tab2 + '#') :
+        fw.write(tab2 + line);
     # seek station data line
     line = line.strip();
     if not line.startswith('\"') :
@@ -59,7 +58,7 @@ for line in fr: # line = 行
                     fw.write(tab4 + '\"' + prev_sta_code + '\": {\n');
                     fw.write(prev_sta_options);
                     fw.write(tab5 + '\"connect\": { \"' + prev_line_code + \
-                    prev2_sta_code + '\": ' + prev_distance + ' }\n');
+                        prev2_sta_code + '\": ' + prev_distance + ' }\n');
                     fw.write(tab4 + '},\n');  
             fw.write(tab3 + '}\n');
             fw.write(tab2 + '},\n');
@@ -87,8 +86,12 @@ for line in fr: # line = 行
     sta_name = sta_name.strip('\"');
     # station options
     sta_options = '';
-    if comment.startswith('<夜間通過>') :
+    if '<夜間通過>' in comment :
         sta_options += (tab5 + '\"pass_night\": true,\n');
+    if '<駅共有/相互直通:' in comment :
+        sta_share_list = comment.split('<駅共有/相互直通:',1)[1].split('>',1)[0].strip();
+        sta_options += (tab5 + '\"share\": [ ' + sta_share_list + ' ],\n');
+    dummy, dummy, comment = comment.rpartition('>'); 
     exist_dist_info = (comment.endswith('blocks') and comment.strip('blocks ').isdecimal());
     if exist_dist_info :
         distance = comment.strip('blocks ');
@@ -98,13 +101,13 @@ for line in fr: # line = 行
             if prev_sta_options == '' :
                 fw.write(tab4 + '\"' + prev_sta_code + '\": { \"connect\": { \"');
                 fw.write(line_code + prev2_sta_code + '\": ' + prev_distance + \
-                ', \"' + line_code + sta_code + '\": ' + distance + ' } },\n');
+                    ', \"' + line_code + sta_code + '\": ' + distance + ' } },\n');
             else :
                 fw.write(tab4 + '\"' + prev_sta_code + '\": {\n');
                 fw.write(prev_sta_options);
                 fw.write(tab5 + '\"connect\": { \"');
                 fw.write(line_code + prev2_sta_code + '\": ' + prev_distance + \
-                ', \"' + line_code + sta_code + '\": ' + distance + ' }\n');
+                    ', \"' + line_code + sta_code + '\": ' + distance + ' }\n');
                 fw.write(tab4 + '},\n');
         else :
             # when distance info begin
@@ -147,23 +150,44 @@ print("# phase 1 complete.");
 ######################################################
 
 print("# phase 2: transfer");
-transfer_sta_list = {}
-fw.write('    \"transfer\": {\n');
+ui_transfer = {};
 for line_code in station_locations.keys() :
     for sta_code in station_locations[line_code].keys() :
-        if not sta_code in transfer_sta_list :
-            transfer_sta_list[sta_code] = [];
-        transfer_sta_list[sta_code].append(line_code + sta_code);
+        if not sta_code in ui_transfer :
+            ui_transfer[sta_code] = [];
+        ui_transfer[sta_code].append(line_code + sta_code);
 # delete no transfer station
-transfer_sta_list = { k : v for k,v in transfer_sta_list.items() if len(v)>=2}
-
-
+ui_transfer = { k : v for k,v in ui_transfer.items() if len(v)>=2}
+fw.write(tab1 + '\"transfer\": ');
+fw.write((pp1.pformat(ui_transfer)).replace('{', '{\n ') \
+    .replace('}', '\n'+ tab1 +'},\n').replace('\'', '\"'));
 print("# phase 2 complete.");
 
 ######################################################
 
-print("# phase 3: staions");
+print("# phase 3: stations");
+ui_stations = {};
+for line_code in station_locations :
+    ui_stations[line_code] = {};
+    for sta_code in station_locations[line_code].keys():
+        ui_stations[line_code][sta_code] = list(station_locations[line_code][sta_code]);
+        ui_stations[line_code][sta_code].pop(); #ignore station name
+        sta_name, sta_name_yomi = \
+            station_special_names.get(line_code + sta_code, \
+                station_names.get(sta_code, ('unknown', 'unknown')));
+        ui_stations[line_code][sta_code].append(sta_name);
+        ui_stations[line_code][sta_code].append(sta_name_yomi);
+fw.write(tab1 + '\"stations\": ');
+fw.write(
+    (pp2.pformat(ui_stations)) \
+    .replace(': {' + ' '*3, ': {\n' + tab3) \
+    .replace(']},\n' + tab1, ']\n'+ tab2 +'},\n' + tab2) \
+    .replace(' '*14, tab3) \
+    .replace('\'', '\"') \
+    .replace('{   ', '{\n' + tab2)
+    .replace('}}', '}\n' + tab1 + '}\n')
+);
+fw.write('}\n');
 print("# phase 3 complete.");
 
-# memo
-# fw.write(pprint.pformat(HOGE,indent=4,).maketrans('\'','\"')); 
+######################################################
