@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # united_info.jsonをある程度まで自動生成
 # (直通などは非対応なので手での修正が必要)
@@ -172,9 +172,8 @@ for line_code in station_locations :
     for sta_code in station_locations[line_code].keys():
         ui_stations[line_code][sta_code] = list(station_locations[line_code][sta_code]);
         ui_stations[line_code][sta_code].pop(); #ignore station name
-        sta_name, sta_name_yomi = \
-            station_special_names.get(line_code + sta_code, \
-                station_names.get(sta_code, ('unknown', 'unknown')));
+        sta_name, sta_name_yomi = station_special_names.get(line_code, ({})) \
+        .get(sta_code, station_names.get(sta_code, ('unknown', 'unknown')));
         ui_stations[line_code][sta_code].append(sta_name);
         ui_stations[line_code][sta_code].append(sta_name_yomi);
 fw.write(tab1 + '\"stations\": ');
