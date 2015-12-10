@@ -1,0 +1,3 @@
+[submodule "HaruIconSurvey.wiki"]
+	path = HaruIconSurvey.wiki
+	url = git://github.com/karno/HaruIconSurvey.wiki
