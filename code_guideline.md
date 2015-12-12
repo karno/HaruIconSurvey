@@ -47,7 +47,7 @@
 
 * H - harutrak (Harutrak)
 * R - はるレール (haru Rail)
-* E - はる急行鉄道 (haru Express)
+* X - はる急行鉄道 (haru eXpress)
 * S - はる高速旅客鉄道 (Shinkansen)
 * M - ムメイ高速鉄道 (Mumei highspeed railway)
 * K - はる近郊鉄道 (haru Kinko railway)
